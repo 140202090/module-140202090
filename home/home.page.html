@@ -1,0 +1,15 @@
+﻿<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      HOME
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+ <firebase-ui></firebase-ui>
+    <h3 *ngIf="afAuth.auth.currentUser">
+        Welcome! {{afAuth.auth.currentUser.displayName}}
+    </h3>
+   <ion-button *ngIf ="afAuth.auth.currentUser" (click)="signout()" >Çıkış Yap</ion-button>
+</ion-content>
